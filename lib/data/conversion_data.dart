@@ -1,0 +1,186 @@
+import '../models/conversion_unit.dart';
+
+class ConversionData {
+  static const List<ConversionCategory> categories = [
+    ConversionCategory(
+      name: 'Length',
+      emoji: '📏',
+      units: [
+        ConversionUnit(name: 'Meter', symbol: 'm', toBase: 1.0, isBaseUnit: true),
+        ConversionUnit(name: 'Kilometer', symbol: 'km', toBase: 1000.0),
+        ConversionUnit(name: 'Centimeter', symbol: 'cm', toBase: 0.01),
+        ConversionUnit(name: 'Millimeter', symbol: 'mm', toBase: 0.001),
+        ConversionUnit(name: 'Mile', symbol: 'mi', toBase: 1609.344),
+        ConversionUnit(name: 'Yard', symbol: 'yd', toBase: 0.9144),
+        ConversionUnit(name: 'Foot', symbol: 'ft', toBase: 0.3048),
+        ConversionUnit(name: 'Inch', symbol: 'in', toBase: 0.0254),
+        ConversionUnit(name: 'Nautical Mile', symbol: 'nmi', toBase: 1852.0),
+        ConversionUnit(name: 'Light Year', symbol: 'ly', toBase: 9.461e15),
+      ],
+    ),
+    ConversionCategory(
+      name: 'Weight',
+      emoji: '⚖️',
+      units: [
+        ConversionUnit(name: 'Kilogram', symbol: 'kg', toBase: 1.0, isBaseUnit: true),
+        ConversionUnit(name: 'Gram', symbol: 'g', toBase: 0.001),
+        ConversionUnit(name: 'Milligram', symbol: 'mg', toBase: 1e-6),
+        ConversionUnit(name: 'Pound', symbol: 'lb', toBase: 0.453592),
+        ConversionUnit(name: 'Ounce', symbol: 'oz', toBase: 0.0283495),
+        ConversionUnit(name: 'Metric Ton', symbol: 't', toBase: 1000.0),
+        ConversionUnit(name: 'US Ton', symbol: 'ton', toBase: 907.185),
+        ConversionUnit(name: 'Stone', symbol: 'st', toBase: 6.35029),
+        ConversionUnit(name: 'Carat', symbol: 'ct', toBase: 0.0002),
+      ],
+    ),
+    ConversionCategory(
+      name: 'Temperature',
+      emoji: '🌡️',
+      units: [
+        ConversionUnit(name: 'Celsius', symbol: '°C', isBaseUnit: true),
+        ConversionUnit(name: 'Fahrenheit', symbol: '°F'),
+        ConversionUnit(name: 'Kelvin', symbol: 'K'),
+        ConversionUnit(name: 'Rankine', symbol: '°R'),
+      ],
+    ),
+    ConversionCategory(
+      name: 'Area',
+      emoji: '📐',
+      units: [
+        ConversionUnit(name: 'Square Meter', symbol: 'm²', toBase: 1.0, isBaseUnit: true),
+        ConversionUnit(name: 'Square Kilometer', symbol: 'km²', toBase: 1e6),
+        ConversionUnit(name: 'Square Foot', symbol: 'ft²', toBase: 0.092903),
+        ConversionUnit(name: 'Square Inch', symbol: 'in²', toBase: 0.00064516),
+        ConversionUnit(name: 'Acre', symbol: 'ac', toBase: 4046.86),
+        ConversionUnit(name: 'Hectare', symbol: 'ha', toBase: 10000.0),
+        ConversionUnit(name: 'Square Mile', symbol: 'mi²', toBase: 2.59e6),
+        ConversionUnit(name: 'Square Yard', symbol: 'yd²', toBase: 0.836127),
+      ],
+    ),
+    ConversionCategory(
+      name: 'Volume',
+      emoji: '💧',
+      units: [
+        ConversionUnit(name: 'Liter', symbol: 'L', toBase: 1.0, isBaseUnit: true),
+        ConversionUnit(name: 'Milliliter', symbol: 'mL', toBase: 0.001),
+        ConversionUnit(name: 'Cubic Meter', symbol: 'm³', toBase: 1000.0),
+        ConversionUnit(name: 'US Gallon', symbol: 'gal', toBase: 3.78541),
+        ConversionUnit(name: 'UK Gallon', symbol: 'gal UK', toBase: 4.54609),
+        ConversionUnit(name: 'Fluid Ounce', symbol: 'fl oz', toBase: 0.0295735),
+        ConversionUnit(name: 'Cup', symbol: 'cup', toBase: 0.236588),
+        ConversionUnit(name: 'Tablespoon', symbol: 'tbsp', toBase: 0.0147868),
+        ConversionUnit(name: 'Teaspoon', symbol: 'tsp', toBase: 0.00492892),
+        ConversionUnit(name: 'Pint', symbol: 'pt', toBase: 0.473176),
+        ConversionUnit(name: 'Quart', symbol: 'qt', toBase: 0.946353),
+      ],
+    ),
+    ConversionCategory(
+      name: 'Time',
+      emoji: '⏱️',
+      units: [
+        ConversionUnit(name: 'Second', symbol: 's', toBase: 1.0, isBaseUnit: true),
+        ConversionUnit(name: 'Millisecond', symbol: 'ms', toBase: 0.001),
+        ConversionUnit(name: 'Microsecond', symbol: 'μs', toBase: 1e-6),
+        ConversionUnit(name: 'Minute', symbol: 'min', toBase: 60.0),
+        ConversionUnit(name: 'Hour', symbol: 'h', toBase: 3600.0),
+        ConversionUnit(name: 'Day', symbol: 'd', toBase: 86400.0),
+        ConversionUnit(name: 'Week', symbol: 'wk', toBase: 604800.0),
+        ConversionUnit(name: 'Month', symbol: 'mo', toBase: 2629746.0),
+        ConversionUnit(name: 'Year', symbol: 'yr', toBase: 31556952.0),
+        ConversionUnit(name: 'Decade', symbol: 'dec', toBase: 315569520.0),
+        ConversionUnit(name: 'Century', symbol: 'cent', toBase: 3155695200.0),
+      ],
+    ),
+    ConversionCategory(
+      name: 'Energy',
+      emoji: '⚡',
+      units: [
+        ConversionUnit(name: 'Joule', symbol: 'J', toBase: 1.0, isBaseUnit: true),
+        ConversionUnit(name: 'Kilojoule', symbol: 'kJ', toBase: 1000.0),
+        ConversionUnit(name: 'Calorie', symbol: 'cal', toBase: 4.184),
+        ConversionUnit(name: 'Kilocalorie', symbol: 'kcal', toBase: 4184.0),
+        ConversionUnit(name: 'Watt-hour', symbol: 'Wh', toBase: 3600.0),
+        ConversionUnit(name: 'Kilowatt-hour', symbol: 'kWh', toBase: 3600000.0),
+        ConversionUnit(name: 'Electronvolt', symbol: 'eV', toBase: 1.60218e-19),
+        ConversionUnit(name: 'BTU', symbol: 'BTU', toBase: 1055.06),
+      ],
+    ),
+    ConversionCategory(
+      name: 'Speed',
+      emoji: '💨',
+      units: [
+        ConversionUnit(name: 'Meter/Second', symbol: 'm/s', toBase: 1.0, isBaseUnit: true),
+        ConversionUnit(name: 'Kilometer/Hour', symbol: 'km/h', toBase: 0.277778),
+        ConversionUnit(name: 'Mile/Hour', symbol: 'mph', toBase: 0.44704),
+        ConversionUnit(name: 'Knot', symbol: 'kn', toBase: 0.514444),
+        ConversionUnit(name: 'Foot/Second', symbol: 'ft/s', toBase: 0.3048),
+        ConversionUnit(name: 'Mach', symbol: 'Ma', toBase: 343.0),
+      ],
+    ),
+    ConversionCategory(
+      name: 'Data',
+      emoji: '💾',
+      units: [
+        ConversionUnit(name: 'Bit', symbol: 'bit', toBase: 1.0, isBaseUnit: true),
+        ConversionUnit(name: 'Byte', symbol: 'B', toBase: 8.0),
+        ConversionUnit(name: 'Kilobyte', symbol: 'KB', toBase: 8000.0),
+        ConversionUnit(name: 'Megabyte', symbol: 'MB', toBase: 8e6),
+        ConversionUnit(name: 'Gigabyte', symbol: 'GB', toBase: 8e9),
+        ConversionUnit(name: 'Terabyte', symbol: 'TB', toBase: 8e12),
+        ConversionUnit(name: 'Petabyte', symbol: 'PB', toBase: 8e15),
+        ConversionUnit(name: 'Kibibyte', symbol: 'KiB', toBase: 8192.0),
+        ConversionUnit(name: 'Mebibyte', symbol: 'MiB', toBase: 8388608.0),
+        ConversionUnit(name: 'Gibibyte', symbol: 'GiB', toBase: 8589934592.0),
+      ],
+    ),
+    ConversionCategory(
+      name: 'Pressure',
+      emoji: '🧪',
+      units: [
+        ConversionUnit(name: 'Pascal', symbol: 'Pa', toBase: 1.0, isBaseUnit: true),
+        ConversionUnit(name: 'Kilopascal', symbol: 'kPa', toBase: 1000.0),
+        ConversionUnit(name: 'Megapascal', symbol: 'MPa', toBase: 1e6),
+        ConversionUnit(name: 'Bar', symbol: 'bar', toBase: 100000.0),
+        ConversionUnit(name: 'Millibar', symbol: 'mbar', toBase: 100.0),
+        ConversionUnit(name: 'Atmosphere', symbol: 'atm', toBase: 101325.0),
+        ConversionUnit(name: 'PSI', symbol: 'psi', toBase: 6894.76),
+        ConversionUnit(name: 'mmHg', symbol: 'mmHg', toBase: 133.322),
+        ConversionUnit(name: 'Torr', symbol: 'Torr', toBase: 133.322),
+      ],
+    ),
+    ConversionCategory(
+      name: 'Currency',
+      emoji: '💰',
+      units: [
+        ConversionUnit(name: 'US Dollar', symbol: 'USD', toBase: 1.0, isBaseUnit: true),
+        ConversionUnit(name: 'Euro', symbol: 'EUR', toBase: 0.9235),
+        ConversionUnit(name: 'British Pound', symbol: 'GBP', toBase: 0.7921),
+        ConversionUnit(name: 'Japanese Yen', symbol: 'JPY', toBase: 149.85),
+        ConversionUnit(name: 'Canadian Dollar', symbol: 'CAD', toBase: 1.3612),
+        ConversionUnit(name: 'Australian Dollar', symbol: 'AUD', toBase: 1.5341),
+        ConversionUnit(name: 'Swiss Franc', symbol: 'CHF', toBase: 0.8923),
+        ConversionUnit(name: 'Chinese Yuan', symbol: 'CNY', toBase: 7.2415),
+        ConversionUnit(name: 'Indian Rupee', symbol: 'INR', toBase: 83.12),
+        ConversionUnit(name: 'Brazilian Real', symbol: 'BRL', toBase: 4.9712),
+        ConversionUnit(name: 'Korean Won', symbol: 'KRW', toBase: 1325.0),
+        ConversionUnit(name: 'Mexican Peso', symbol: 'MXN', toBase: 17.15),
+        ConversionUnit(name: 'Singapore Dollar', symbol: 'SGD', toBase: 1.3452),
+        ConversionUnit(name: 'UAE Dirham', symbol: 'AED', toBase: 3.6725),
+        ConversionUnit(name: 'Saudi Riyal', symbol: 'SAR', toBase: 3.7498),
+        ConversionUnit(name: 'Russian Ruble', symbol: 'RUB', toBase: 92.5),
+        ConversionUnit(name: 'Turkish Lira', symbol: 'TRY', toBase: 30.45),
+        ConversionUnit(name: 'South African Rand', symbol: 'ZAR', toBase: 18.63),
+        ConversionUnit(name: 'Norwegian Krone', symbol: 'NOK', toBase: 10.55),
+        ConversionUnit(name: 'Swedish Krona', symbol: 'SEK', toBase: 10.43),
+      ],
+    ),
+  ];
+
+  static ConversionCategory? getCategoryByName(String name) {
+    try {
+      return categories.firstWhere((c) => c.name == name);
+    } catch (_) {
+      return null;
+    }
+  }
+}
